@@ -1,0 +1,157 @@
+<odoo>
+    <data>
+        <record id="action_report_cooperator_registry_book" model="ir.actions.report">
+            <field name="name">Cooperators Registry Book</field>
+            <field name="model">cooperator.registry.book</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">l10n_es_cooperator_registry_book.report_cooperator_registry_book</field>
+            <field name="report_file">l10n_es_cooperator_registry_book.report_cooperator_registry_book</field>
+            <field name="print_report_name">('Cooperators_Registry_Book_%s' % (object.name))</field>
+            <field name="binding_model_id" ref="model_cooperator_registry_book"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <template id="report_cooperator_registry_book">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="text-center" ><h2>Summary</h2></div>
+                        <table class="table o_main_table table-centered table-bordered table-sm small" name="summary">
+                            <thead class="table-secondary">
+                                <tr>
+                                    <th>Capital Subscription:</th>
+                                    <th>Shares:</th>
+                                    <th>Active Cooperators:</th>
+                                    <th>Old Cooperators:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span t-esc="summary['total_capital_subscriptions']" />€</td>
+                                    <td><span t-esc="summary['total_shares']" /></td>
+                                    <td><span t-esc="summary['cooperators']" /></td>
+                                    <td><span t-esc="summary['old_cooperators']" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table o_main_table table-centered table-bordered table-sm small" name="summary">
+                            <thead class="table-secondary">
+                                <tr>
+                                    <t t-foreach="summary['amount_per_type'].keys()" t-as="type_sub">
+                                        <th><span t-esc="type_sub" /></th>
+                                    </t>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <t t-foreach="summary['amount_per_type'].values()" t-as="type_sub">
+                                        <td><span t-esc="type_sub" />€</td>
+                                    </t>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="page-break-before:always;" />
+                        <div class="text-center" ><h2>Cooperators Registry Book</h2></div>
+                        <t t-foreach="coops" t-as="coop">
+                            <table style="page-break-inside: avoid;" class="table o_main_table table-centered table-bordered table-sm small" name="cooperators">
+                                <thead class="table-secondary">
+                                    <tr>
+                                        <th colspan="1">Number: <span t-esc="coop['cooperator_register_number']" /></th>
+                                        <th colspan="3">Name: <span t-esc="coop['name']" /></th>
+                                        <th colspan="2">Cooperator Type: <span t-esc="coop['cooperator_type']" /></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="1"><b>VAT: </b><span t-esc="coop['vat']" /></td>
+                                        <td colspan="2"><b>Nacionality: </b><t t-if="coop['country_id']"><span t-esc="coop['country_id'][1]" /></t></td>
+                                        <td colspan="3"><b>Joining date: </b><span t-esc="coop['effective_date']" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"><b>Address: </b><span t-esc="coop['street']" /></td>
+                                        <td><b>ZIP: </b><span t-esc="coop['zip']" /></td>
+                                        <td colspan="1"><b>City: </b><span t-esc="coop['city']" /></td>
+                                        <td><b>State: </b><t t-if="coop['state_id']"><span t-esc="coop['state_id'][1]" /></t></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="5" class="text-center">
+                                            Capital subscriptions: <span t-esc="coop['total_value']" />€
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="1">Date</th>
+                                        <th colspan="2">Type</th>
+                                        <th colspan="1">Shares</th>
+                                        <th colspan="1">Amount</th>
+                                        <th colspan="1">Balance</th>
+                                    </tr>
+                                    <t t-set="sum_amount" t-value="0" />
+                                    <t t-foreach="coop['sub_req']" t-as="subreq">
+                                        <t t-set="sum_amount" t-value="sum_amount + subreq['subscription_amount']" />
+                                        <tr>
+                                            <td colspan="1"><span t-esc="subreq['date']" /></td>
+                                            <td colspan="2"><span t-esc="subreq['share_product_id'][1]" /></td>
+                                            <td colspan="1"><span t-esc="subreq['ordered_parts']" /></td>
+                                            <td colspan="1"><span t-esc="subreq['subscription_amount']" /></td>
+                                            <td colspan="1"><span t-esc="sum_amount" /></td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </t>
+                        <p style="page-break-before:always;" />
+                        <div class="text-center" ><h2>Old Cooperators Registry Book</h2></div>
+                        <t t-foreach="old_coops" t-as="coop">
+                            <table style="page-break-inside: avoid;" class="table o_main_table table-centered table-bordered table-sm small" name="cooperators">
+                                <thead class="table-secondary">
+                                    <tr>
+                                        <th colspan="1">Number: <span t-esc="coop['cooperator_register_number']" /></th>
+                                        <th colspan="3">Name: <span t-esc="coop['name']" /></th>
+                                        <th colspan="2">Cooperator Type: <span t-esc="coop['cooperator_type']" /></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="1"><b>VAT: </b><span t-esc="coop['vat']" /></td>
+                                        <td colspan="2"><b>Nacionality: </b><t t-if="coop['country_id']"><span t-esc="coop['country_id'][1]" /></t></td>
+                                        <td colspan="2"><b>Joining date: </b><span t-esc="coop['effective_date']" /></td>
+                                        <td colspan="1"><b>Leaving date:</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"><b>Address: </b><span t-esc="coop['street']" /></td>
+                                        <td><b>ZIP: </b><span t-esc="coop['zip']" /></td>
+                                        <td colspan="1"><b>City: </b><span t-esc="coop['city']" /></td>
+                                        <td><b>State: </b><t t-if="coop['state_id']"><span t-esc="coop['state_id'][1]" /></t></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="5" class="text-center">
+                                            Capital subscriptions: <span t-esc="coop['total_value']" />€
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="1">Date</th>
+                                        <th colspan="2">Type</th>
+                                        <th colspan="1">Shares</th>
+                                        <th colspan="1">Amount</th>
+                                        <th colspan="1">Balance</th>
+                                    </tr>
+                                    <t t-set="sum_amount" t-value="0" />
+                                    <t t-foreach="coop['sub_req']" t-as="subreq">
+                                        <t t-set="sum_amount" t-value="sum_amount + subreq['subscription_amount']" />
+                                        <tr>
+                                            <td><span t-esc="subreq['date']" /></td>
+                                            <td><span t-esc="subreq['ordered_parts']" /></td>
+                                            <td><span t-esc="subreq['subscription_amount']" /></td>
+                                            <td><span t-esc="subreq['share_product_id'][1]" /></td>
+                                            <td><span t-esc="sum_amount" /></td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

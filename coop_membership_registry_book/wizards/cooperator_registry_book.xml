@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2023 Criptomart
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="cooperator_registry_book_form_view">
+        <field name="name">cooperator.registry.book.form</field>
+        <field name="model">cooperator.registry.book</field>
+        <field name="arch" type="xml">
+            <form string="Cooperator Registry Book">
+                <group>
+                    <span>Print the cooperators book. This may take a few minutes</span>
+                </group>
+                <footer>
+                    <button name="print_cooperator_registry_book"
+                            string="OK"
+                            class="btn-primary"
+                            type="object"/>
+                    <button string="Cancel"
+                            class="btn-default"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="cooperator_registry_book_act_window">
+        <field name="name">Cooperator Registry Book</field>
+        <field name="res_model">cooperator.registry.book</field>
+        <field name="view_mode">form</field>
+        <field name="context">{}</field>
+        <field name="target">new</field>
+    </record>
+
+    <record model="ir.ui.menu" id="share_subscription_report_menu">
+        <field name="name">Cooperator Registry Book</field>
+        <field name="parent_id" ref="capital_subscription.menu_capital_main"/>
+        <field name="action" ref="cooperator_registry_book_act_window"/>
+        <field name="sequence" eval="16"/>
+    </record>
+</odoo>

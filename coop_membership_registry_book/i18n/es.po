@@ -1,0 +1,216 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* coop_membership_registry_book
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-08 10:57+0000\n"
+"PO-Revision-Date: 2023-06-08 13:07+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "<b>Address: </b>"
+msgstr "<b>Dirección: </b>"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "<b>City: </b>"
+msgstr "<b>Ciudad: </b>"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "<b>Joining date: </b>"
+msgstr "<b>Alta: </b>"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "<b>Leaving date: </b>"
+msgstr "<b>Baja: </b>"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "<b>Nationality: </b>"
+msgstr "<b>Nacionalidad: </b>"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "<b>State: </b>"
+msgstr "<b>Provincia: </b>"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "<b>VAT: </b>"
+msgstr "<b>DNI/NIE: </b>"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "<b>ZIP: </b>"
+msgstr "<b>C.P.: </b>"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.cooperator_registry_book_form_view
+msgid "<span>Print the cooperators book. This may take a few minutes</span>"
+msgstr "<span>Imprime el libro de cooperativistas. Esto puede tardar unos minutos.</span>"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "Active Cooperators:"
+msgstr "Cooperativistas:"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "Amount"
+msgstr "Cantidad"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "Balance"
+msgstr "Saldo"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.cooperator_registry_book_form_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "Capital Subscription:"
+msgstr "Suscripciones de capital:"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "Capital subscriptions:"
+msgstr "Suscripciones de capital:"
+
+#. module: coop_membership_registry_book
+#: model:ir.actions.act_window,name:coop_membership_registry_book.cooperator_registry_book_act_window
+#: model:ir.ui.menu,name:coop_membership_registry_book.share_subscription_report_menu
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.cooperator_registry_book_form_view
+msgid "Cooperator Registry Book"
+msgstr "Libro de Cooperativistas"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "Cooperator Type:"
+msgstr "Tipo de socio:"
+
+#. module: coop_membership_registry_book
+#: model:ir.actions.report,name:coop_membership_registry_book.action_report_cooperator_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "Cooperators Registry Book"
+msgstr "Libro de Cooperativistas"
+
+#. module: coop_membership_registry_book
+#: model:ir.model.fields,field_description:coop_membership_registry_book.field_cooperator_registry_book__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: coop_membership_registry_book
+#: model:ir.model.fields,field_description:coop_membership_registry_book.field_cooperator_registry_book__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "Date"
+msgstr "Fecha"
+
+#. module: coop_membership_registry_book
+#: model:ir.model.fields,field_description:coop_membership_registry_book.field_cooperator_registry_book__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: coop_membership_registry_book
+#: model:ir.model.fields,field_description:coop_membership_registry_book.field_cooperator_registry_book__date_end
+msgid "Fecha Fin"
+msgstr ""
+
+#. module: coop_membership_registry_book
+#: model:ir.model.fields,field_description:coop_membership_registry_book.field_cooperator_registry_book__date_start
+msgid "Fecha Inicio"
+msgstr ""
+
+#. module: coop_membership_registry_book
+#: model:ir.model.fields,field_description:coop_membership_registry_book.field_cooperator_registry_book__id
+msgid "ID"
+msgstr ""
+
+#. module: coop_membership_registry_book
+#: model:ir.model.fields,field_description:coop_membership_registry_book.field_cooperator_registry_book____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: coop_membership_registry_book
+#: model:ir.model.fields,field_description:coop_membership_registry_book.field_cooperator_registry_book__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: coop_membership_registry_book
+#: model:ir.model.fields,field_description:coop_membership_registry_book.field_cooperator_registry_book__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "Name:"
+msgstr "Nombre:"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "Number:"
+msgstr "Número:"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.cooperator_registry_book_form_view
+msgid "OK"
+msgstr "OK"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "Old Cooperators Registry Book"
+msgstr "Libro de Antiguos Cooperativistas"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "Old Cooperators:"
+msgstr "Antiguos cooperativistas:"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "Shares"
+msgstr "Participaciones"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "Shares:"
+msgstr "Participaciones:"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "Summary"
+msgstr "Resumen"
+
+#. module: coop_membership_registry_book
+#: model_terms:ir.ui.view,arch_db:coop_membership_registry_book.report_cooperator_registry_book
+msgid "Type"
+msgstr "Tipo"
+
+#. module: coop_membership_registry_book
+#: model:ir.model,name:coop_membership_registry_book.model_cooperator_registry_book
+msgid "Wizard Cooperators Registry Book"
+msgstr "Asistente de Libro de Cooperativistas"
+
+#. module: coop_membership_registry_book
+#: model:ir.model.fields,field_description:coop_membership_registry_book.field_cooperator_registry_book__name
+msgid "name"
+msgstr "nombre"
