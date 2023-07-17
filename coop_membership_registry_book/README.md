@@ -1,4 +1,4 @@
-# Cooperator Registry Book
+# Foodcoops Cooperator Registry Book
 
 Generate a PDF report of share movements to be presented to the Spanish Administration.
 
